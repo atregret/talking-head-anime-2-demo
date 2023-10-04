@@ -131,3 +131,9 @@ dmypy.json
 *.iml
 data/
 .idea/
+
+# my
+*.pt 
+*.zip
+*.tar 
+*.rar
