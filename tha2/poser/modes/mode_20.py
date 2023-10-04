@@ -149,6 +149,7 @@ def load_eyebrow_decomposer(file_name: str):
 
 
 def load_eyebrow_morphing_combiner(file_name: str):
+    """加载眉毛连接器权重"""
     factory = EyebrowMorphingCombiner00Factory(
         EyebrowMorphingCombiner00Args(
             image_size=128,
@@ -171,6 +172,7 @@ def load_eyebrow_morphing_combiner(file_name: str):
 
 
 def load_face_morpher(file_name: str):
+    """加载脸部变形器权重"""
     factory = FaceMorpher08Factory(
         FaceMorpher08Args(
             image_size=192,
@@ -193,6 +195,7 @@ def load_face_morpher(file_name: str):
 
 
 def load_face_rotater(file_name: str):
+    """加载旋转器权重"""
     #print("Loading the face rotater ... ", end="")
     module = TwoAlgoFaceRotatorFactory().create()
     module.load_state_dict(torch_load(file_name))
@@ -201,6 +204,7 @@ def load_face_rotater(file_name: str):
 
 
 def load_combiner(file_name: str):
+    """加载连接器权重"""
     #print("Loading the combiner ... ", end="")
     module = CombinerFactory().create()
     module.load_state_dict(torch_load(file_name))

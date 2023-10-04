@@ -367,7 +367,7 @@ class MainFrame(wx.Frame):
 
 
 if __name__ == "__main__":
-    cuda = torch.device('cuda')
+    cuda = torch.device('cpu')
     import tha2.poser.modes.mode_20
 
     poser = tha2.poser.modes.mode_20.create_poser(cuda)
